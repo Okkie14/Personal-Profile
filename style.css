@@ -1,3 +1,4 @@
+@media only screen and (min-width: 1024px) {
 /* Nav bar styles */
 body {
     margin: 0;
@@ -14,9 +15,9 @@ header::after {
 }
 
 .switch {
-    float: left;
+    float: right;
     margin-top: 11px;
-    margin-left: 11px;
+    margin-right: 11px;
     padding: 0;
     width: 60px;
     height: 34px;
@@ -36,7 +37,7 @@ header::after {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #ccc;
+    background-color: #bbb;
     -webkit-transition: .4s;
     transition: .4s;
     display: block;
@@ -56,11 +57,11 @@ header::after {
   }
 
   input:checked + .slider-round {
-    background-color: #2196F3;
+    background-color: #301E67;
   }
   
   input:focus + .slider-round {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #03001C;
   }
   
   input:checked + .slider-round:before {
@@ -80,17 +81,18 @@ header::after {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 25px;
+    
 }
 
 .container h1 {
     font-size: 40px;
     float: left;
     margin: 0;
-    padding: 0;
     text-transform: uppercase;
-    color: rgb(94, 89, 89);
+    color: rgb(0, 0, 0);
     padding: 5px 0;
+    vertical-align: auto;
 }
 
 nav {
@@ -105,20 +107,20 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 80px;
     padding-top: 20px;
     position: relative;
 }
 
 nav a:hover {
-    color: #000;
+    color: #fff;
 }
 
 nav a::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
 
     width: 0%;
     top: 0;
@@ -126,6 +128,8 @@ nav a::before {
     position: absolute;
 
     transition: all ease-in-out 250ms;
+
+    border-radius: 5px;
 }
 
 nav a:hover::before {
@@ -133,7 +137,9 @@ nav a:hover::before {
 }
 
 nav > ul > li > a {
-    color:rgb(94, 89, 89);
+    color:rgb(0, 0, 0);
     text-decoration: none;
     text-transform: uppercase;
+}
+
 }
