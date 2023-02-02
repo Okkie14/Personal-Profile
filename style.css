@@ -1,4 +1,24 @@
+/* Desktop screen size */
 @media only screen and (min-width: 1025px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Tablet screen size */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Screen size */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 /* Nav bar styles */
 body {
     margin: 0;
@@ -14,85 +34,32 @@ header::after {
     clear: both;
 }
 
-.switch {
+#dark-mode-toggle {
+    width: 50px;
+    height: 25px;
     float: right;
-    margin-top: 11px;
-    margin-right: 11px;
-    padding: 0;
-    width: 60px;
-    height: 34px;
-    position: relative;
+    margin-top: 13px;
+    margin-right: 13px;
+    border-radius: 20px;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-.slider-round {
-    position: absolute;
-    cursor: pointer;
-    top: 0px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #bbb;
-    -webkit-transition: .4s;
-    transition: .4s;
-    display: block;
-    content: '';
-}
-
-.slider-round:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  input:checked + .slider-round {
+button {
     background-color: #301E67;
-  }
-  
-  input:focus + .slider-round {
-    box-shadow: 0 0 1px #03001C;
-  }
-  
-  input:checked + .slider-round:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider-round {
-    border-radius: 34px;
-  }
-  
-  .slider-round:before {
-    border-radius: 50%;
-  }
+}
 
 .container {
     width: 80%;
     margin: 0 25px;
-    
 }
 
 .container h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     float: left;
     margin: 0;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     padding: 5px 0;
-    vertical-align: auto;
+
 }
 
 nav {
@@ -107,7 +74,8 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 80px;
+    justify-content: space-between;
+    margin-left: 15px;
     padding-top: 20px;
     position: relative;
 }
@@ -142,4 +110,131 @@ nav > ul > li > a {
     text-transform: uppercase;
 }
 
+/* Toggle for button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B6EADA;
+    background-color: #B6EADA;
+    margin-left: -25px;
+    margin-top: 1px;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+}
+
+
+/* Dark mode colors */
+.darkMode {
+    background-color: #03001C;
+    color: #B6EADA;
+}
+
+.darkMode .container h1 {
+    color: #B6EADA;
+}
+
+.darkMode header {
+    background-color: #301E67;
+}
+
+.darkMode nav > ul > li > a {
+    color: #B6EADA;
+}
+
+.darkMode button {
+    background-color: rgb(65, 168, 252);
+}
+
+.darkMode .switch {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #111;
+    background-color: #111;
+    margin-left: 21px;
+    margin-top: 1px;
+    border-radius: 50%;  
+    transition: ease-in-out 0.5s; 
+}
+
+/* About me section */
+main {
+    display: block;
+    margin-left: 27px;
+}
+
+.about-me p {
+    font-size: 1.1rem;
+}
+
+/* Contact Details section */
+.contact {
+    margin-left: -27px;
+    background-color: #301E67;
+    font-size: 18px;
+}
+
+.contact .contact-title {
+    display: block;
+    background-color: #301E67;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "email github";
+}
+
+.contact h4 {
+    font-size: 1.4rem;
+}
+
+.contact p {
+    font-size: 1.4rem;
+}
+
+.email {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "email-img"
+                         "contact-info-email"
+                         "p-email";
+    
+}
+
+.email-img img {
+    width: 75px;
+    height: 75px;
+}
+
+.email-img, .contact-info-email, .p-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "github-img"
+                         "contact-info-github"
+                         "p-github";
+}
+
+.github-img img {
+    width: 75px;
+    height: 75px;
+}
+
+.github-img, .contact-info-github, .p-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
