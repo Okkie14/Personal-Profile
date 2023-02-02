@@ -1,0 +1,118 @@
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 0;
+    }
+    
+    header {
+        background-color: rgb(65, 168, 252);
+    }
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .switch {
+        float: right;
+        margin-top: 11px;
+        margin-right: 11px;
+        padding: 0;
+        width: 40px;
+        height: 23px;
+        position: relative;
+    }
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+    
+    .slider-round {
+        position: absolute;
+        cursor: pointer;
+        top: 0px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #bbb;
+        -webkit-transition: .4s;
+        transition: .4s;
+        display: block;
+        content: '';
+    }
+    
+    .slider-round:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+    
+      input:checked + .slider-round {
+        background-color: #301E67;
+      }
+      
+      input:focus + .slider-round {
+        box-shadow: 0 0 1px #03001C;
+      }
+      
+      input:checked + .slider-round:before {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+      }
+      
+      /* Rounded sliders */
+      .slider-round {
+        border-radius: 34px;
+      }
+      
+      .slider-round:before {
+        border-radius: 50%;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 25px;
+        
+    }
+    
+    .container h1 {
+        font-size: 20px;
+        float: left;
+        margin: 0;
+        text-transform: uppercase;
+        color: rgb(0, 0, 0);
+        padding: 13px 0;
+    }
+    
+    nav {
+        float: right;
+    }
+    
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-left: 25px;
+        padding: 5px 0;
+        position: relative;
+    }
+
+    nav > ul > li > a {
+        color:rgb(0, 0, 0);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
