@@ -160,6 +160,19 @@ nav > ul > li > a {
     transition: ease-in-out 0.5s; 
 }
 
+.darkMode .contact{
+    background-color: #13005A;
+    color: #5B8FB9;
+}
+
+.darkMode .p-github a {
+    color: #1C82AD;
+}
+
+.darkMode .p-github a:hover {
+    color: #03C988;
+}
+
 /* About me section */
 main {
     display: block;
@@ -173,13 +186,14 @@ main {
 /* Contact Details section */
 .contact {
     margin-left: -27px;
-    background-color: #301E67;
+    background-color: #B6EADA;
     font-size: 18px;
+    color: navy;
 }
 
 .contact .contact-title {
     display: block;
-    background-color: #301E67;
+    text-transform: uppercase;
 }
 
 .contact h2 {
@@ -196,6 +210,7 @@ main {
 
 .contact h4 {
     font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
 .contact p {
@@ -238,3 +253,14 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.p-github a {
+    text-decoration-line: none;
+    color: navy;
+    cursor: pointer;
+}
+
+.p-github a:hover {
+    color: rgb(65, 168, 252);
+}
+
