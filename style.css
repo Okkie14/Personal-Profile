@@ -17,6 +17,20 @@
     html {
         font-size: 12px;
     }
+    .project-name {
+        display: grid;
+        margin-right: 20px;
+    }
+
+    .project-name > p {
+        width: fit-content;
+        text-align: justify;
+    }
+
+    .project-name .figures img {
+        width: 100%;
+    }
+
 }
 
 /* Nav bar styles */
@@ -186,14 +200,19 @@ main {
 }
 
 /* Project Section */
+@media only screen and (min-width: 800px) {
 .projects {
     font-size: 16px;
 }
 
 .project-name {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "Project p-projects figures";
+}
+
+.project-name > p {
+    text-align: justify;
 }
 
 .project {
@@ -210,8 +229,13 @@ main {
 .project-name .figures img {
     height: 75px;
     width: 75px;
+    display: block;
 }
 
+.project-name .figures img:hover {
+    transform: scale(7.5);
+}
+}
     
 /* Contact Details section */
 .contact {
