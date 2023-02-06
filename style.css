@@ -34,10 +34,14 @@
 }
 
 /* Nav bar styles */
+html {
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
 body {
     margin: 0;
     color: navy;
-    background-color: #d8d8d8;
+    background-color: #d3d3d3;
 }
 
 header {
@@ -199,6 +203,26 @@ main {
     font-size: 1.1rem;
 }
 
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'About Me Photo';
+}
+
+/* Skill set */
+.information .skills {
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+}
+
+.information .skills .skills-list > li {
+    width: 150px;
+}
+
+.information .skills .skills-list > li:hover {
+    color: rgb(196, 0, 0);
+    transition: ease-in-out 450ms;
+}
+
 /* Project Section */
 @media only screen and (min-width: 800px) {
 .projects {
@@ -213,6 +237,7 @@ main {
 
 .project-name > p {
     text-align: justify;
+    line-height: 25px;
 }
 
 .project {
@@ -234,6 +259,7 @@ main {
 
 .project-name .figures img:hover {
     transform: scale(7.5);
+    cursor: zoom-in;
 }
 }
     
