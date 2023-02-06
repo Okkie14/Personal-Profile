@@ -9,6 +9,53 @@
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
     html {
         font-size: 18px;
+        margin-left: 10px;
+    }
+
+    header {
+        margin-left: -10px;
+    }
+
+    .project-name {
+        display: grid;
+        font-size: 1.25rem;
+    }
+
+    .project-name > p {
+        width: 94%;
+        text-align: justify;
+    }
+
+    .project-name .figures img {
+        width: 70%;
+    }
+
+    .skills .profile-pic {
+        width: 50%;
+        height: 50%;
+    }
+
+    .contact {
+        background-color: #1C82AD;
+        margin-left: -10px;
+        margin-bottom: -10px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .contact :is(h2) {
+        padding-top: 5px;
+    }
+
+    .contact :is(h4, p) {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .contact img {
+        width: 25%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -16,21 +63,54 @@
 @media only screen and (max-width: 480px) {
     html {
         font-size: 12px;
+        margin-left: 10px;
     }
+
+    header {
+        margin-left: -10px;
+    }
+
     .project-name {
         display: grid;
-        margin-right: 20px;
+        font-size: 1.25rem;
     }
 
     .project-name > p {
-        width: fit-content;
+        width: 94%;
         text-align: justify;
     }
 
     .project-name .figures img {
-        width: 100%;
+        width: 70%;
     }
 
+    .skills .profile-pic {
+        width: 50%;
+        height: 50%;
+    }
+
+    .contact {
+        background-color: #1C82AD;
+        margin-left: -10px;
+        margin-bottom: -10px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .contact :is(h2) {
+        padding-top: 5px;
+    }
+
+    .contact :is(h4, p) {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .contact img {
+        width: 25%;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 /* Nav bar styles */
@@ -193,46 +273,100 @@ nav > ul > li > a {
     color: #03C988;
 }
 
-/* About me section */
-main {
-    display: block;
-    margin-left: 27px;
+.darkMode .about-me {
+    background-color: #0c082b;
 }
 
-.about-me p {
-    font-size: 1.1rem;
+/* About me section & Skill section */
+@media only screen and (min-width: 800px) {
+main {
+    display: block;
+    margin: 0 27px;
 }
 
 .about-me {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'About Me Photo';
+    text-align: center;
+    background-color: #cdcbcb;
 }
 
-/* Skill set */
+.about-me-title {
+    font-size: 1.9rem;
+    padding: 10px 0;
+}
+
+.about-me-block > p {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 25px;
+    padding-left: 25px;
+}
+
+.about-me-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "paragraph image";
+}
+
+.skills {
+    position: relative;
+    margin: 0 auto;
+}
+
+.skills-heading {
+    text-decoration: underline;
+}
+
+.skills .profile-pic {
+    opacity: 1;
+    display: block;
+    height: 270px;
+    width: 200px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.skills-list{
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-5%, -125%);
+    -ms-transform: translate(0%, 0%);
+    text-align: center;
+}
+
+.skills:hover .profile-pic{
+    opacity: 0.3;
+}
+
+.skills:hover .skills-list {
+    opacity: 1;
+}
+
 .information .skills {
-    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
 .information .skills .skills-list > li {
     width: 150px;
 }
-
-.information .skills .skills-list > li:hover {
-    color: rgb(196, 0, 0);
-    transition: ease-in-out 450ms;
 }
-
 /* Project Section */
 @media only screen and (min-width: 800px) {
 .projects {
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.projects-title {
+    font-size: 1.9rem;
 }
 
 .project-name {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "Project p-projects figures";
+    margin: 15px 0;
 }
 
 .project-name > p {
@@ -243,6 +377,7 @@ main {
 .project {
     text-align: center;
     vertical-align: bottom;
+    margin: auto 0;
 }
 
 .project .p-projects .figures {
@@ -252,9 +387,10 @@ main {
 }
 
 .project-name .figures img {
-    height: 75px;
-    width: 75px;
+    height: 100px;
+    width: 100px;
     display: block;
+    padding: 5px 5px;
 }
 
 .project-name .figures img:hover {
@@ -264,9 +400,10 @@ main {
 }
     
 /* Contact Details section */
+@media only screen and (min-width: 800px) {
 .contact {
-    margin-left: -27px;
-    background-color: #B6EADA;
+    margin: -27px;
+    background-color: #b2ccff;
     font-size: 18px;
     color: navy;
 }
@@ -279,6 +416,7 @@ main {
 .contact h2 {
     text-align: center;
     font-size: 2rem;
+    padding-top: 10px;
 }
 
 .contact-info {
@@ -343,4 +481,4 @@ main {
 .p-github a:hover {
     color: rgb(65, 168, 252);
 }
-
+}
